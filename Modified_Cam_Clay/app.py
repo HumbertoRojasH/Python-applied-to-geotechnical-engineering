@@ -44,7 +44,7 @@ st.latex(r"\begin{equation} \partial\varepsilon_{p}^{e}=\tfrac{k}{vp'}*\partial 
 st.write('''This implies a linear relationship between the value of the specific volume $v$ and the logarithm of the stress $p'$ for a case
 loading and unloading of the soil, this linear relationship is shown in Figure 1. These values are found from a test
 of consolidation.''')
-render_svg("img/fig1_mcc.svg","Figure 1. Graph v – ln(p')")
+render_svg("Modified_Cam_Clay/img/fig1_mcc.svg","Figure 1. Graph v – ln(p')")
 st.write('''The linear relationship between the logarithmic of the preconsolidation pressure and the specific volume is shown below''')
 st.latex(r"\begin{equation} v=N-\lambda ln(p'_0) \end{equation}")
 st.write('''Likewise, it is assumed that a change in the deviating stress q generates a shear elastic deformation of the form:''')
@@ -70,13 +70,13 @@ st.plotly_chart(fig)
 
 st.write('''The values where the value of q is maximum, for the different yield surfaces, belong to the curve of
 critical condition (CSL) (Figure 2).''')
-render_svg("img/fig2_mcc.svg","Figure 2. Yield Surface of the Modified Cam Clay Model.")
+render_svg("Modified_Cam_Clay/img/fig2_mcc.svg","Figure 2. Yield Surface of the Modified Cam Clay Model.")
 st.write('''The soil is assumed to obey a normalized condition, so the plastic potential equation is practically the same
 same as the yield surface in the $p'-q$ plane:''')
 st.latex(r"\begin{equation} g=f=q^{2}-M^{2}\left [ p'(p'_0-p') \right ]=0 \end{equation}")
 st.write('''When there is a stress that causes the creep equation to be exceeded, plastic deformations are generated, according to
 generalized plastic stress theory, the plastic strains are found according to equations (9) and (10).''')
-render_svg("img/fig3_mcc.svg","Figure 3. Yield surface and plastic potential for Ottawa dense sand.")
+render_svg("Modified_Cam_Clay/img/fig3_mcc.svg","Figure 3. Yield surface and plastic potential for Ottawa dense sand.")
 st.latex(r"\begin{equation} \partial \varepsilon _{p}^{p}=x*\frac{\partial g}{\partial p'} \end{equation}")
 st.latex(r"\begin{equation} \partial \varepsilon _{q}^{p}=x*\frac{\partial g}{\partial q} \end{equation}")
 st.write('''Where the value of $x$ is a scalar whose value will depend on the behavior of the soils. It is seen that a change in the
@@ -105,7 +105,7 @@ st.latex(r"\begin{equation} \begin{bmatrix} \partial \varepsilon _{p}^{p}\\\part
 st.write('''Equation (18) is used for elastic deformations, while equation (19) is used when the soil enters into
 the plastic range. Both general equations are necessary and relevant to find the deformations of the soil before
 a change in the stresses, evaluating whether they are in the elastic or plastic range.''')
-render_svg("img/fig4_mcc.svg","Figure 4. Cases in the Modified Cam Clay Model.")
+render_svg("Modified_Cam_Clay/img/fig4_mcc.svg","Figure 4. Cases in the Modified Cam Clay Model.")
 st.write('''Employing the creep law, we can then see and predict the behavior of the soil, in case a, when
 there is a change of stress from point A to point B, in this case, the initial stress is in the
 yield surface, so that, as the stresses increase, it enters a plastic range, increasing the pressure of
@@ -130,12 +130,12 @@ which means that there is no elastic deformation, which implies that the effecti
 when there is an over-consolidated sample and an undrained test is performed, there is no variation in stress $p'$, only
 of the value of $q$, this until it reaches the yield surface, hence the soil has a plastic behavior, such as
 is shown in figure 5.''')
-render_svg("img/fig5_mcc.svg","Figure 5. Case of an overconsolidated sample.")
+render_svg("Modified_Cam_Clay/img/fig5_mcc.svg","Figure 5. Case of an overconsolidated sample.")
 st.write('''In the case of our model, depending on whether our initial point of analysis is to the right or the
 left of the critical state line $(n=M)$, in the case, it is on the right, the soil will present a behavior
 of hardening until it intersects the CSL, in the case it is on the right side, it will present a
 softening behavior until approaching the CSL.''')
-render_svg("img/fig6_mcc.svg","Figure 6. Case of soil softening and hardening.")
+render_svg("Modified_Cam_Clay/img/fig6_mcc.svg","Figure 6. Case of soil softening and hardening.")
 st.write('''An increase in the effective stress $p'$, generates a change in the effective stress $p$, relating it to the
 $u$ value, also known as the pore pressure.''')
 st.latex(r"\begin{equation} \partial u=\partial p-\partial p' \end{equation}")
@@ -148,9 +148,9 @@ st.latex(r"\begin{equation} u=\frac{q}{3}+p'_0-p' \end{equation}")
 st.write('''For a better understanding of the model, examples of the behavior in the $p'-q$ plane are shown, the interaction of
 the yield surface and the shear strain value according to the stress variation $q$ in the case of a soil
 normally consolidated and overconsolidated respectively:''')
-render_svg("img/fig7_mcc.svg","Figure 7. Conventional undrained triaxial test in normal soil compression: (a) Stress plane p'-q; (b) Stress-strain graph.")
-render_svg("img/fig8_mcc.svg","Figure 8. Conventional undrained triaxial test in slightly overconsolidated soils: (a) Stress plane p'-q; (b) Stress-strain graph.")
-render_svg("img/fig9_mcc.svg","Figure 9. Conventional undrained triaxial test in strongly overconsolidated soils: (a) Stress plane p'-q; (b) Stress-strain graph.")
+render_svg("Modified_Cam_Clay/img/fig7_mcc.svg","Figure 7. Conventional undrained triaxial test in normal soil compression: (a) Stress plane p'-q; (b) Stress-strain graph.")
+render_svg("Modified_Cam_Clay/img/fig8_mcc.svg","Figure 8. Conventional undrained triaxial test in slightly overconsolidated soils: (a) Stress plane p'-q; (b) Stress-strain graph.")
+render_svg("Modified_Cam_Clay/img/fig9_mcc.svg","Figure 9. Conventional undrained triaxial test in strongly overconsolidated soils: (a) Stress plane p'-q; (b) Stress-strain graph.")
 st.write('''To find the strains in the case of the undrained triaxial test, we must apply the general strains
 expressed in equations (18) and (19) but considering the boundary conditions of the CU triaxial test, having
 as a result the following equations:''')
