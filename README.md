@@ -1,1 +1,1 @@
-# -Python-applied-to-geotechnical-engineering
+# Python-applied-to-geotechnical-engineering
