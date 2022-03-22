@@ -156,7 +156,7 @@ as a result the following equations:''')
 st.latex(r"\begin{equation} \partial \varepsilon _{p}^{p}=-\partial \varepsilon _{p}^{e} \end{equation}")
 st.latex(r"\begin{equation} \partial \varepsilon _{q}^{p}=\frac{2n*\partial \varepsilon _{p}^{p}}{M^{2}-n^{2}} \end{equation}")
 st.markdown("#### 4. Application")
-st.write('''For the case of analysis, the laboratory data found in the paper “Application of the model
+st.write('''For the case of analysis we consider, the laboratory data found in the paper “Application of the model
 modified cam-clay in reconstituted clays from the Bogotá savannah”, where the triaxial and
 consolidation tests to find the necessary parameters.
 
