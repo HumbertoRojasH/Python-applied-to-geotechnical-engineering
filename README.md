@@ -1,2 +1,2 @@
-# Python applied to geotechnical engineering
-python codes to better understand geotechnical concepts
+# Python-Applied-to-Geotechnical-Engineering
+ Codes developed in python to learn about geotechnical engineering
