@@ -29,11 +29,13 @@ Miguel Bernilla Lucero, mbernillal@uni.pe
      })
 st.title('Modified Cam Clay Constitutive Model')
 st.markdown("#### Summary")
-st.write('''In this report, the theoretical and practical analysis of the Modified Cam Clay Constitutive Model is carried out, one of 
-which introduces us to the critical state theory to characterize a specific soil. First, it will be carried out
-conceptual development of the subject to later take it to a practical application case and understand the operation of this modeling.''')
+st.write('''In this report, theoretical formulation and applications of the Modified Cam Clay Constitutive Model is carried out, one of 
+which introduces us to the critical state theory to characterize a specific soil. First, conceptual development of the subject is carried out to later consider it to a application case and understand the behavior of this model.''')
 st.markdown("#### 1. Introduction")
-st.write('''The study of constitutive models has had a great evolution in academic circles, but its application practice in design has been limited, mainly due to its low diffusion and the need to use a greater number of parameters than those required in traditional methodologies. On the other hand, it has come popularizing the use of computer applications specialized in geotechnics, which include within their options, the use of models based on the critical state theory. One of these models is called Modified Cam-Clay (CCM). The CCM model (Roscoe and Burland, 1968), is relatively easy to use and its Parameters can be found by conventional laboratory tests. However, it is not always adjusted to the real behavior of the materials.''')
+st.write('''The study of constitutive models has had a great evolution in academic sphere, but its application practice in design has been limited, 
+mainly due to its low diffusion and the need to use a greater number of parameters than those required in traditional methodologies. On the other hand, 
+the use of computer applications specialized in geotechnics become popular, which include within their options, the use of models based on the critical state theory. 
+One of these models is called Modified Cam-Clay (MCC). The MCC model (Roscoe and Burland, 1968), is relatively easy to use and its Parameters can be found by conventional laboratory tests. However, it is not always adjusted to the real behavior of the materials.''')
 st.markdown("#### 2. Theoretical development of the constitutive model")
 st.write('''The Modified Cam Clay constitutive model is a model used mainly to represent soil types
 clayey. This model was known in four properties: Elastic Properties, Yield Surface, Plastic Potential, and the
@@ -49,13 +51,13 @@ st.write('''The linear relationship between the logarithmic of the preconsolidat
 st.latex(r"\begin{equation} v=N-\lambda ln(p'_0) \end{equation}")
 st.write('''Likewise, it is assumed that a change in the deviating stress q generates a shear elastic deformation of the form:''')
 st.latex(r"\begin{equation} \partial \varepsilon_{q}^{e}=\frac{\partial q}{3G} \end{equation}")
-st.write('''In the $p'-q$ plane for the Cam Clay model (Figure 2) we can observe the critical state line LEC, which has
-as slope a value of M, in the same $p'-q$ plane, the yield surface can be represented as a curve
-ellipsoidal, whose main characteristic is that the upper point is intersected by the critical state line
+st.write('''In the $p'-q$ plane for the Cam Clay model (Figure 2) we can observe the critical state line CSL, which has
+a slope of M, in the same $p'-q$ plane, the yield surface can be represented as a curve
+ellipsoidal, It's main characteristic is that the upper point is intersected by the critical state line
 and that its size depends on the preconsolidation pressure $p'_0$, the equation of the ellipse is the following:
 ''')
 st.latex(r"\begin{equation} \frac{p'}{p'_0}=\frac{M^{2}}{M^{2}+\frac{q^{2}}{p'^{2}}} \end{equation}")
-st.write("Where a value of $n$ is defined as follows:")
+st.write("Where $n$ is defined as follows:")
 st.latex(r"\begin{equation} n=\frac{q}{p'} \end{equation}")
 st.write("Subtituting equation (5) in equation (4):")
 st.latex(r"\begin{equation} \frac{p'}{p'_0}=\frac{M^{2}}{M^{2}+n^{2}} \end{equation}")
@@ -71,15 +73,14 @@ st.plotly_chart(fig)
 st.write('''The values where the value of q is maximum, for the different yield surfaces, belong to the curve of
 critical condition (CSL) (Figure 2).''')
 render_svg("Modified_Cam_Clay/img/fig2_mcc.svg","Figure 2. Yield Surface of the Modified Cam Clay Model.")
-st.write('''The soil is assumed to obey a normalized condition, so the plastic potential equation is practically the same
-same as the yield surface in the $p'-q$ plane:''')
+st.write('''The soil is assumed to obey a normalized condition, so the plastic potential equation is practically the same as the yield surface in the $p'-q$ plane:''')
 st.latex(r"\begin{equation} g=f=q^{2}-M^{2}\left [ p'(p'_0-p') \right ]=0 \end{equation}")
-st.write('''When there is a stress that causes the creep equation to be exceeded, plastic deformations are generated, according to
+st.write('''When stress causes creep to be exceeded, plastic deformations are generated, according to
 generalized plastic stress theory, the plastic strains are found according to equations (9) and (10).''')
 render_svg("Modified_Cam_Clay/img/fig3_mcc.svg","Figure 3. Yield surface and plastic potential for Ottawa dense sand.")
 st.latex(r"\begin{equation} \partial \varepsilon _{p}^{p}=x*\frac{\partial g}{\partial p'} \end{equation}")
 st.latex(r"\begin{equation} \partial \varepsilon _{q}^{p}=x*\frac{\partial g}{\partial q} \end{equation}")
-st.write('''Where the value of $x$ is a scalar whose value will depend on the behavior of the soils. It is seen that a change in the
+st.write('''Where $x$ is a scalar that depends on soil behavior. It is seen that a change in the
 value of $p'_0$ ⁡generates a change in the plastic surface and also a change in a plastic volumetric strain and
 plastic shear strain as shown in the following equation:''')
 st.latex(r"\begin{equation} \partial p'_0=\frac{\partial p'_0}{\partial \varepsilon _{p}^{p}}*\partial \varepsilon _{p}^{p}+\frac{\partial p'_0}{\partial \varepsilon _{q}^{p}}*\partial \varepsilon _{q}^{p} \end{equation}")
@@ -106,14 +107,14 @@ st.write('''Equation (18) is used for elastic deformations, while equation (19) 
 the plastic range. Both general equations are necessary and relevant to find the deformations of the soil before
 a change in the stresses, evaluating whether they are in the elastic or plastic range.''')
 render_svg("Modified_Cam_Clay/img/fig4_mcc.svg","Figure 4. Cases in the Modified Cam Clay Model.")
-st.write('''Employing the creep law, we can then see and predict the behavior of the soil, in case a, when
+st.write('''Employing the creep law, we can then see and predict the behavior of the soil, in case (a), when
 there is a change of stress from point A to point B, in this case, the initial stress is in the
-yield surface, so that, as the stresses increase, it enters a plastic range, increasing the pressure of
-preconsolidation and therefore modifying the yield law. In the case of b, the initial stress state A is not found.
-on the yield surface, which is why, when there is a change in the stress that does not reach the value of the surface
+yield surface, so that, as the stresses increase, it enters to a plastic range, increasing the pressure of
+preconsolidation and therefore modifying the yield law. In the case of (b), the initial stress state A is not found.
+on the yield surface, because when there is a change in the stress that does not reach the value of the surface
 of yield, there are no plastic deformations and the value of the yield surface is not modified.''')
 st.markdown("#### Case of an undrained triaxial test")
-st.write(r'''In the present work, it will be evaluated in the case of an undrained triaxial test due to the data we have.
+st.write(r'''In the present work, we evaluate the case of an undrained triaxial test because of the data we have.
 In an undrained case, since there is no water leakage, there is no volumetric change in the soil sample, so
 the value of $\partial \varepsilon^{p}$ is 0, in other words, the sum of $\partial \varepsilon _{p}^{e}$ and $\partial \varepsilon _{p}^{p}$ equals zero.''')
 st.latex(r"\begin{equation} \partial \varepsilon _{p}^{e}+\partial \varepsilon _{p}^{p}=0 \end{equation}")
@@ -123,17 +124,15 @@ st.write('''Combining equation (21) with the creep equation, we get:''')
 st.latex(r"\begin{equation} -\frac{\partial p'}{p'}=\left [ \frac{\lambda -k}{\lambda} \right ]*\frac{2n}{M^{2}+n^{2}}*\partial n \end{equation}")
 st.write('''Integrating equation (22) with an initial p' for an initial value of n, we get:''')
 st.latex(r"\begin{equation} \frac{p'_i}{p'}=\left ( \frac{M^{2}+n^{2}}{M^{2}+n_{i}^{2}} \right )^{\frac{\lambda -k}{\lambda }} \end{equation}")
-st.write(r'''In the same way that in the general case there are 2 cases of analysis, which at the initial point of analysis is within
-the yield surface and if it is on the yield surface. In the case that it is inside the surface,
-there is a possibility of plastic deformations, so $\partial \varepsilon _{p}^{p} = 0$ and according to equation (20), $\partial \varepsilon _{p}^{e}$ would also be 0, for
-which means that there is no elastic deformation, which implies that the effective stresses remain constant. In conclusion,
+st.write(r'''In the same way that in the general case there are 2 cases of analysis, when the initial point of analysis is within the yield surface and when it is on the yield surface. In the case that it is inside the surface,
+there is a possibility of plastic deformations, so $\partial \varepsilon _{p}^{p} = 0$ and according to equation (20), $\partial \varepsilon _{p}^{e}$ would also be 0, 
+which means that there is no elastic deformation, this implies that the effective stresses remain constant. In conclusion,
 when there is an over-consolidated sample and an undrained test is performed, there is no variation in stress $p'$, only
-of the value of $q$, this until it reaches the yield surface, hence the soil has a plastic behavior, such as
-is shown in figure 5.''')
+of the value of $q$, this until it reaches the yield surface, hence the soil has a plastic behavior, see figure 5.''')
 render_svg("Modified_Cam_Clay/img/fig5_mcc.svg","Figure 5. Case of an overconsolidated sample.")
 st.write('''In the case of our model, depending on whether our initial point of analysis is to the right or the
-left of the critical state line $(n=M)$, in the case, it is on the right, the soil will present a behavior
-of hardening until it intersects the CSL, in the case it is on the right side, it will present a
+left of the critical state line $(n=M)$, when it is on the right, the soil will present a behavior
+of hardening until it intersects the CSL, on the other hand, when it is on the right side, it will present a
 softening behavior until approaching the CSL.''')
 render_svg("Modified_Cam_Clay/img/fig6_mcc.svg","Figure 6. Case of soil softening and hardening.")
 st.write('''An increase in the effective stress $p'$, generates a change in the effective stress $p$, relating it to the
@@ -161,16 +160,15 @@ st.write('''For the case of analysis, the laboratory data found in the paper “
 modified cam-clay in reconstituted clays from the Bogotá savannah”, where the triaxial and
 consolidation tests to find the necessary parameters.
 
-Triaxial tests help us determine the value of $M$, $G$ and $p'_i$, which are the slope of the line of
+Triaxial tests help us to determine the value of $M$, $G$ and $p'_i$, which are the slope of the line of
 critical state, the shear modulus of the soil, and the initial stress applied.
 
 Consolidation tests are used to find $λ$, $k$, which is the slope of the specific volume plot.
-vs $log(p')$, as well as the value of $p'_0$ or pre-consolidation state, as well as the value of $N$, which is the point
-maximum of the graph.
+vs $log(p')$, as well as the value of $p'_0$ or pre-consolidation state, as well as the value of $N$, which is the maximum point of the graph.
 
-The test results are as follows in the sidebar:
+As an example of how to enter data in this application, the test results are found in the sidebar.
 
-Based on these parameters, we will find the displacements, stresses, pore pressure, and graphs of these results.''')
+Based on these parameters, we find the displacements, stresses, pore pressure, and graphs of these results.''')
 
 st.sidebar.markdown("### Parameters of Triaxial Test")
 st.sidebar.write("Format data: [ $\lambda $, $k$, $M$]")
