@@ -109,7 +109,7 @@ render_svg("Modified_Cam_Clay/img/fig4_mcc.svg","Figure 4. Cases in the Modified
 st.write('''Employing the creep law, we can then see and predict the behavior of the soil, in case a, when
 there is a change of stress from point A to point B, in this case, the initial stress is in the
 yield surface, so that, as the stresses increase, it enters a plastic range, increasing the pressure of
-preconsolidation and therefore modifying the yield law. In case of b, the initial stress state A is not found.
+preconsolidation and therefore modifying the yield law. In the case of b, the initial stress state A is not found.
 on the yield surface, which is why, when there is a change in the stress that does not reach the value of the surface
 of yield, there are no plastic deformations and the value of the yield surface is not modified.''')
 st.markdown("#### Case of an undrained triaxial test")
