@@ -239,5 +239,5 @@ from Bogota. *Construction Engineering Magazine*, 20.
 
 Wood, D. M. (1990). *Soil behavior and soil mechanics in critical condition*. Cambridge: Cambridge University Press.
 
-https://soilmodels.com/soilanim/
+Gertraud Medicus. https://soilmodels.com/soilanim/
 """)
