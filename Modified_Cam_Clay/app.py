@@ -205,7 +205,8 @@ else:
          results_f=[]
          for df in results:
             data2 =pd.DataFrame({"p'":[df.loc[df.index[-1], "p'"]], "q":[df.loc[df.index[-1], "q"]], "µ":[df.loc[df.index[-1], "µ"]], "ε":[e_max]})
-            df3 = df.append(data2, ignore_index = True)
+            #df3 = df.append(data2, ignore_index = True)
+            df3 = pd.concat([df, data2], ignore_index=True)
             results_f.append(df3)
 
          for i,datas in enumerate(results_f):
