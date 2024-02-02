@@ -228,6 +228,9 @@ else:
 
          fig3 = q_vs_ε(M,results_f)
          st.plotly_chart(fig3)
+    
+         fig4 = u_vs_ε(M,results_f)
+         st.plotly_chart(fig4)
  
 st.markdown("### References")
 st.write("""8, P.V. (s.f.). *Manual of material models*.
