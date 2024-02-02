@@ -60,7 +60,7 @@ def cam_clay_undrained(M, λ, k, specimen, Points, Condition):
     p[1]=p[0]
     q[1] = (M**2*(p[1]*(pc[1]-p[1])))**0.5
     n_inicial = q[1]/p[1]
-    u[1] = q[1]/3+pc[1]-p[1]
+    u[1] = q[1]/3+p[0]-p[1]
     if n_inicial<M: 
       Type = "Hardening"
       n[1:] = linspace(n_inicial, M-0.01, Points-1)
@@ -74,7 +74,7 @@ def cam_clay_undrained(M, λ, k, specimen, Points, Condition):
     p[1] = p[0]*((M**2)/(M**2+n_inicial**2))**EXP
     pc[1] = p[1]*(M**2+n_inicial**2)/( M**2)
     q[1] = n_inicial*p[1]
-    u[1] = q[1]/3+pc[0]-p[1]
+    u[1] = q[1]/3+p[0]-p[1]
     Type = "Hardening"
     n[1:] = linspace(n_inicial, M-0.01, Points-1)
 
@@ -87,7 +87,7 @@ def cam_clay_undrained(M, λ, k, specimen, Points, Condition):
     q[i] = n[i]*p[i]
 
     # pore pressure
-    u[i] = q[i]/3+pc[0]-p[i]
+    u[i] = q[i]/3+p[0]-p[i]
 
     # deformation
     Δp = p[i]-p[i-1]
@@ -136,4 +136,14 @@ def q_vs_ε(M,results):
                     legend=dict(yanchor="bottom",y=0.01,xanchor="right",x=0.99),
                     xaxis_title="ε",
                     yaxis_title="q (kPa)")
+  return fig
+def u_vs_ε(M,results):
+  fig = go.Figure()
+  for df in results:
+    fig.add_trace(go.Scatter(x=df["ε"], y=df["µ"],mode='lines+markers', name="p' = "+str(df["p'"][0])+" kPa"))
+    
+  fig.update_layout(title=dict(text="Deformation vs Excess Pore Pressure ",x=0.5,xanchor='center', font=dict(size=24)),
+                    legend=dict(yanchor="bottom",y=0.01,xanchor="right",x=0.99),
+                    xaxis_title="ε",
+                    yaxis_title="u (kPa)")
   return fig
